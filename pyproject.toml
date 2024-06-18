@@ -1,0 +1,35 @@
+[project]
+name = "sampro-middware"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "wandy", email = "wandy.irawan17@gmail.com" }
+]
+dependencies = [
+    "sqlalchemy>=2.0.30",
+    "alembic>=1.13.1",
+    "granian>=1.4.2",
+    "psycopg2>=2.9.9",
+    "pandas>=2.2.2",
+    "numpy>=1.26.4",
+    "pymysql>=1.1.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+"sampro-middware" = "sampro_middware:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sampro_middware"]
